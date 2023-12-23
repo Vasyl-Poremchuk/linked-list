@@ -179,7 +179,7 @@ class SinglyLinkedList:
             return
 
         for i in range(position):
-            if current_node is None:
+            if not current_node:
                 return
 
             previous_node = current_node
@@ -398,7 +398,7 @@ class SinglyLinkedList:
         previous_node = None
         current_node = self.head_node
 
-        while current_node is not None:
+        while current_node:
             last_node = current_node.next_node
             current_node.next_node = previous_node
             previous_node = current_node
